@@ -128,9 +128,6 @@ trips against 140M in Manhattan).
 
 ## Known issues
 
-- **`.git` is ~1.1 GB.** 791 MB of parquet was committed before `.gitignore`
-  existed. Ignoring them fixes new commits but not history; purging requires
-  `git filter-repo` and a force-push.
 - **The rollup goes stale** when the Lambda ingests a new month. Rebuilding is
   currently manual. A Step Functions state machine doing `INSERT INTO` for the
   new partition would close the loop.
