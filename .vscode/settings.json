@@ -1,0 +1,35 @@
+{
+    "sqltools.connections": [
+        {
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Taxi_postgre",
+            "database": "Taxi_Database",
+            "username": "postgres",
+            "password": "Nisarg123"
+        },
+        {
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "taxi_database",
+            "database": "postgres",
+            "username": "Taxi_Database"
+        },
+        {
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Taxi_Database",
+            "database": "postgres",
+            "username": "Taxi_Database"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+# Terraform state is plain-text JSON describing your infrastructure, and for
+# many resource types it contains secrets. Never commit it.
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Provider binaries and lock metadata
+.terraform/
+.terraform.lock.hcl
+
+# Local overrides and plan files
+*_override.tf
+*_override.tf.json
+
+# Saved plan files -- binary, and they embed resource values. Match both
+# `foo.tfplan` and a bare `tfplan`.
+*.tfplan
+tfplan
+crash.log
+crash.*.log

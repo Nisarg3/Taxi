@@ -1,0 +1,19 @@
+# Local tooling. The Lambda has no requirements file -- it deliberately uses
+# only the standard library plus boto3, which ships in the Python runtime.
+
+# Ingest (ingestion/ingest_to_s3.py)
+boto3>=1.43
+requests>=2.32
+
+# Notebook / local analysis
+pandas>=2.2
+pyarrow>=17.0
+psycopg2-binary>=2.9
+
+# Dashboard (dashboard/app.py)
+streamlit>=1.40
+awswrangler>=3.9
+plotly>=6.0
+
+# Static chart export -- only needed to render figures to PNG outside the app
+kaleido>=0.2

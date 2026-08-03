@@ -1,0 +1,40 @@
+# ---------------------------------------------------------------------------
+# Data -- never commit these.
+#
+# The 2025 parquet files were committed in Commit1 before this file existed,
+# which is why .git is ~1.1 GB. Ignoring them now keeps FUTURE commits clean;
+# purging them from history is a separate, destructive operation.
+#
+# The canonical copy of every parquet file is S3
+# (s3://nyc-taxi-bucket-351205763668/raw/yellow/). Anything under data/raw/ is
+# a local cache that ingestion/ingest_to_s3.py can rebuild from scratch.
+# ---------------------------------------------------------------------------
+data/raw/
+data/_tmp/
+*.parquet
+
+# Reference data IS tracked (data/reference/) -- it is small, and the zone
+# lookup is a genuine input the pipeline depends on.
+
+# --- Python ----------------------------------------------------------------
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- Terraform -------------------------------------------------------------
+# (terraform/.gitignore covers the same ground; duplicated here so a clone
+#  without that file still cannot commit state.)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+*.tfplan
+tfplan
+terraform/build/
+
+# --- Streamlit / editors ---------------------------------------------------
+.streamlit/secrets.toml
+.DS_Store
+Thumbs.db
